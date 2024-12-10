@@ -1,0 +1,356 @@
+@font-face {
+  font-family: "pixtur";
+  src: url("font/Pixtur.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "vivaldi";
+  src: url("font/vivaldi.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Boulder";
+  src: url("font/Boulder.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Boulder Crush";
+  src: url("font/Boulder-crush.otf") format("opentype");
+}
+
+:root {
+  --color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+}
+
+.zoom-container {
+  position: fixed;
+  inset: 0;
+  perspective: 100px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center;
+}
+
+.slides {
+  transform-style: preserve-3d;
+  display: grid;
+  place-items: center;
+}
+
+.slide {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  /* border: 1px solid rgba(255, 255, 255, .5); */
+}
+
+.huge {
+  width: 200vw;
+  height: 400vh;
+}
+
+.full-huge {
+  width: 2000vw;
+  height: 4000vh;
+}
+
+.wide {
+  width: 600vw;
+  height: 200vh;
+}
+
+.extra-wide {
+  width: 500vw;
+  height: 40vh;
+}
+
+.color {
+  --color: #000000;
+  background-color: var(--color);
+}
+
+.black {
+  --color: #000;
+}
+
+.white {
+  --color: #fff;
+}
+
+.green {
+  color: rgb(0, 255, 0);
+}
+
+.grid {
+  display: grid;
+}
+
+.absolute {
+  position: absolute;
+  display: block;
+}
+
+.w-5 {
+  width: 5%;
+}
+.w-10 {
+  width: 10%;
+}
+.w-15 {
+  width: 15%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.top {
+  top: 25%;
+}
+.right {
+  right: 25%;
+}
+.left {
+  left: 25%;
+}
+.bottom {
+  bottom: 25%;
+}
+
+.top-0 {
+  top: 0%;
+}
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.scroller {
+  height: 1257vh;
+}
+
+.vivaldi {
+  font-family: "vivaldi", sans-serif;
+}
+
+.boulder {
+  font-family: "Boulder Crush", sans-serif;
+  letter-spacing: -2em;
+}
+
+.vivaldi-bold {
+  font-family: "vivaldi", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.4em;
+}
+
+.pixtur {
+  font-family: "pixtur";
+}
+
+.container {
+  position: fixed;
+  inset: 0;
+  perspective: 1000px;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  transition: transform 0.1s;
+}
+
+.justify {
+  text-align: justify;
+  font-size: 1em;
+  word-spacing: 10em;
+  letter-spacing: 1em;
+  line-height: 0.5em;
+  word-break: break-all;
+}
+
+.readable {
+  text-align: justify;
+  font-size: 1em;
+  letter-spacing: 5em;
+  line-height: 5em;
+  word-break: break-all;
+}
+
+.center {
+  text-align: center;
+  font-size: 1em;
+  word-spacing: 10em;
+  letter-spacing: 4em;
+  line-height: 0.5em;
+  word-break: break-all;
+}
+
+span {
+  display: inline-block;
+}
+
+.quote {
+  text-align: center;
+  font-size: 2em;
+  word-spacing: 2em;
+  letter-spacing: 0.2em;
+  line-height: 1em;
+}
+
+.extreme-justify {
+  text-align: justify;
+  font-size: 1em;
+  word-spacing: 50em;
+  letter-spacing: 1em;
+  line-height: 0.5em;
+  word-break: break-all;
+}
+
+.extreme-maxi-justify {
+  text-align: center;
+  font-size: 2em;
+  word-spacing: 20em;
+  letter-spacing: 1em;
+  line-height: 0.5em;
+  word-break: break-all;
+}
+
+path {
+  fill: transparent;
+}
+
+text {
+  fill: #fff;
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 320px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 10px;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+}
+
+h1 {
+  font-size: 140px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.glow {
+  filter: drop-shadow(0 5px 0 currentColor) drop-shadow(0 0 1px currentColor);
+}
+
+.layers {
+  display: block;
+}
+.word-span {
+  display: inline-block;
+}
+
+.transparent {
+  color: transparent;
+}
+
+.vis {
+  color: #fff;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.spacey {
+  text-align: justify;
+  word-spacing: -0.2em;
+  letter-spacing: 0.5em;
+  line-height: 1em;
+}
+
+.blur {
+  filter: blur(1px);
+}
+
+.indents {
+  /* white-space: pre-line; */
+  line-height: 0.4;
+  word-spacing: 2em;
+  letter-spacing: 0.2em;
+}
+.indents > span {
+  width: 100%;
+  display: inline-block;
+}
+
+.indents > span:nth-of-type(even) {
+  /* color: red; */
+  margin-bottom: -500px;
+}
+
+.fin {
+  text-align: center;
+  /* border: 1px solid red; */
+  display: grid;
+  align-items: center;
+  aspect-ratio: 1;
+  font-size: 2em;
+}
